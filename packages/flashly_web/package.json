@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Supui Lam",
+  "author": {
+    "name": "Supui Lam"
+  },
   "license": "ISC",
   "publishConfig": {
     "access": "public"
