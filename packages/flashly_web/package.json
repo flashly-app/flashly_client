@@ -1,0 +1,19 @@
+{
+  "name": "@flashly/web-client",
+  "version": "1.0.0",
+  "description": "Web client for flashly app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Supui Lam",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:sjBao/flashly_client.git",
+    "directory": "packages/flashly-web"
+  }
+}
