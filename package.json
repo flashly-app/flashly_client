@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "all client packages for flashly app",
   "scripts": {
+    "install": "echo $(which pnpm) && pnpm install -r",
+    "start:web": "cd packages/web-client && echo $(which pnpm) && pnpm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": {
