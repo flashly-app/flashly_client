@@ -9,5 +9,8 @@
   "author": {
     "name": "Supui Lam"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
 }
