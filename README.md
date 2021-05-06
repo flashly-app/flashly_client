@@ -4,7 +4,9 @@ CSS naming-guide: http://getbem.com/naming/
 
 ### Start-up Instructions
 This repository follows a monorepo structure using pnpm. Make sure you have pnpm installed.
-`npm i -g pnpm`
-`pnpm i -r`
-`pnpm run start:web`
-`pnpm run start:server`
+```bash
+npm i -g pnpm
+pnpm i -r
+pnpm run start:web
+pnpm run start:server
+```
