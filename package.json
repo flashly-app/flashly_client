@@ -1,9 +1,10 @@
 {
   "name": "flashly-app",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "all client packages for flashly app",
   "scripts": {
-    "start:web": "cd packages/web-client && echo $(which pnpm) && pnpm run start",
+    "start:web": "cd packages/web-client && pnpm start",
+    "start:server": "cd packages/dummy-api && pnpm server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": {

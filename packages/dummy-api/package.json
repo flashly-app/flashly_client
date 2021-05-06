@@ -1,0 +1,13 @@
+{
+  "name": "@flashly/dummy-api",
+  "version": "0.1.0",
+  "description": "a mock REST api for the flashly app",
+  "scripts": {
+    "server": "pnpx json-server --watch db.json --port 3005",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Supui Lam"
+  },
+  "license": "ISC"
+}
