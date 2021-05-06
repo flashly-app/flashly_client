@@ -1,7 +1,24 @@
-import React from 'react';
-import styles from './App.module.css'
+
+import React, { useEffect, useState } from 'react';
+
+import { DeckList } from '../DeckList/deck-list';
+
+import styles from './App.module.css';
 
 function App() {
+  const [deckList, setDeckList] = useState([]);
+
+  const fetchDeckListData = async () => {
+    const response = await fetch("http://localhost:3005/decks");
+    const data = await response.json();
+
+    setDeckList(data);
+  };
+
+  useEffect(() => {
+    fetchDeckListData();
+  }, []);
+
   return (
     <div className="App">
       <div className={styles.header}>
@@ -14,6 +31,13 @@ function App() {
         </div>
 
       </div>
+
+      <main>
+        <div className="dashboard">
+          <DeckList data={deckList} />
+          <button>Add Deck</button>
+        </div>
+      </main>
     </div>
   );
 }
