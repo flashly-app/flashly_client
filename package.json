@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "all client packages for flashly app",
   "scripts": {
+    "start:web": "cd packages/web-client && echo $(which pnpm) && pnpm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": {
     "name": "Supui Lam"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
 }
