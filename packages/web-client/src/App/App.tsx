@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 
 import { DeckList } from '../DeckList/deck-list';
@@ -18,8 +19,6 @@ function App() {
     fetchDeckListData();
   }, []);
 
-
-
   return (
     <div className="App">
       <div className={styles.header}>
@@ -30,6 +29,7 @@ function App() {
             <a className={styles.navbar__link} href="/decks">Decks</a>
           </nav>
         </div>
+
       </div>
 
       <main>
