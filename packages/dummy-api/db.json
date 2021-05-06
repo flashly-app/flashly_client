@@ -4,6 +4,16 @@
       "id": "aXgy78oZ",
       "name": "Deck 1",
       "description": "This is an example deck."
+    },
+    {
+      "id": "Huio79Jyg",
+      "name": "Deck 2",
+      "description": "This is another example deck."
+    },
+    {
+      "id": "0iH7gKG7q",
+      "name": "Deck 3",
+      "description": "Lorem Ipsum example deck."
     }
   ],
   "cards": []

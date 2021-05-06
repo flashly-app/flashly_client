@@ -4,7 +4,7 @@
   "description": "all client packages for flashly app",
   "scripts": {
     "start:web": "cd packages/web-client && pnpm start",
-    "start:server": "cd packages/dummy-api && pnpm server",
+    "start:server": "cd packages/dummy-api && pnpm run server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": {
