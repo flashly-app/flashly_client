@@ -1,0 +1,30 @@
+.header {
+  align-items: center;
+  background-color: #a4a4a4;
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem 0;
+}
+
+.header__logo {
+  color: #fff;
+  font-size: 4rem;
+  margin: 0 1rem;
+  text-shadow: 0 4px 4px rgba(0,0,0, 25%);
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar__link {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.navbar__link:hover {
+  text-decoration: underline;
+}
