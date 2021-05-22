@@ -1,0 +1,5 @@
+.deck-tile:hover {
+    background-color: rgba(119, 136, 153, 50%);
+    cursor: pointer;
+    transition: background ease 0.1s;
+  }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { DeckTile } from '../DeckTile/deck-tile';
 import styles from './deck-tile-grid.module.css';
 
 export interface DeckTileGridProps {
@@ -16,12 +17,11 @@ export const DeckTileGrid: React.FunctionComponent<DeckTileGridProps> = ({
 }) => {
 	return (
 		<div className={styles['deck-tile-grid']}>
-			{data.map((item) => {
+			{data.map((item) => (
 				<pre key={item.id}>
-					{item.name}
-					{item.description}
-				</pre>;
-			})}
+					<DeckTile data={item} />
+				</pre>
+			))}
 		</div>
 	);
 };

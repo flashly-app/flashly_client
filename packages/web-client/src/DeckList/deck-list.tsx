@@ -1,5 +1,5 @@
 import React from 'react';
-import { DeckTileGrid } from '../DeckTileGrid/deck-tile.grid';
+import { DeckTileGrid } from '../DeckTileGrid/deck-tile-grid';
 
 import styles from './deck-list.module.css';
 
