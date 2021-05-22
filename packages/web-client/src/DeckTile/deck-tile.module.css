@@ -1,5 +1,28 @@
+.deck-tile{
+    display:flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5%;
+    height: 150px;
+    width: 300px;
+    margin: 20px;
+    padding: 5px;
+}
 .deck-tile:hover {
     background-color: rgba(119, 136, 153, 50%);
     cursor: pointer;
     transition: background ease 0.1s;
   }
+.deck-tile-title{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.deck-tile-description{
+    height: 90px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: pre-line;
+}
