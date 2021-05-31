@@ -22,11 +22,20 @@ function App() {
   return (
     <div className="App">
       <div className={styles.header}>
-        <h1 className={styles.header__logo}>Flashly</h1>
-        <div className="navbar-container">
+        <h1 className={styles.header__logo}>
+        <a className={styles.header__logo} href="/">Flashly</a>  
+        </h1>
+        <div className={styles.navbar__container}>
+          
           <nav className={styles.navbar}>
-            <a className={styles.navbar__link} href="/home">Home</a>
+          <div className={styles.navbar__spaceA}>
             <a className={styles.navbar__link} href="/decks">Decks</a>
+            <button className={styles.navbar__button}>Create</button>
+          </div>
+          
+          <div className={styles.navbar__spaceB}>
+          <button className={styles.navbar__button}>User Login</button>
+          </div>
           </nav>
         </div>
 
