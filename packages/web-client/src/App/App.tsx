@@ -1,11 +1,8 @@
 
 import React, { useEffect, useState } from 'react';
-
 import { DeckList } from '../DeckList/deck-list';
-
 import Modal from '../Modal/Modal';
 import UseModal from '../Modal/UseModal';
-
 import styles from './App.module.css';
 
 function App() {
@@ -18,9 +15,7 @@ function App() {
     setDeckList(data);
   };
 
-  //Elizabeth's Code Reference: https://www.youtube.com/watch?v=l2Kp2SzUdlg&ab_channel=Weibenfalk
   const [modalOpen, setModalOpen] = useState(false) 
-  
 
   useEffect(() => {
     fetchDeckListData();

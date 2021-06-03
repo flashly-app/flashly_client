@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createPortal } from 'react-dom';
+import styles from './Modal.module.css';
 
 type ModalProps={
     modalOpen: boolean;
@@ -9,11 +10,9 @@ const Modal: React.FC<ModalProps> = ({modalOpen, children}) => {
     if(!modalOpen){
         return null
     }
-    return ReactDOM.createPortal(
-        <div>
-            <span>I'm a modal</span>
-            <button>Add</button>
-            <button>Cancel</button>
+    return createPortal(
+        <div className={styles.container}>
+            {children}
         </div>, document.body)
  
 }
