@@ -18,9 +18,7 @@ export const DeckTileGrid: React.FunctionComponent<DeckTileGridProps> = ({
 	return (
 		<div className={styles['deck-tile-grid']}>
 			{data.map((item) => (
-				// <pre key={item.id}>
 				<DeckTile data={item} key={item.id} />
-				// </pre>
 			))}
 		</div>
 	);
