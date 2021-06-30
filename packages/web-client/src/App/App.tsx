@@ -1,8 +1,8 @@
 
 import React, { useEffect, useState } from 'react';
-
 import { DeckList } from '../DeckList/deck-list';
-
+import Modal from '../Modal/Modal';
+import UseModal from '../Modal/UseModal';
 import styles from './App.module.css';
 
 function App() {
@@ -14,6 +14,8 @@ function App() {
 
     setDeckList(data);
   };
+
+  const [modalOpen, setModalOpen] = useState(false) 
 
   useEffect(() => {
     fetchDeckListData();
@@ -30,7 +32,15 @@ function App() {
           <nav className={styles.navbar}>
           <div className={styles.navbar__spaceA}>
             <a className={styles.navbar__link} href="/decks">Decks</a>
-            <button className={styles.navbar__button}>Create</button>
+            <button 
+            onClick = {() => setModalOpen(true)} 
+            className={styles.navbar__button}
+            >
+              Create
+            </button>
+            <Modal modalOpen={modalOpen}>
+              <UseModal setModalOpen = {setModalOpen} />
+            </Modal>
           </div>
           
           <div className={styles.navbar__spaceB}>
@@ -39,6 +49,9 @@ function App() {
           </nav>
         </div>
 
+      </div>
+      
+      <div id="modal-root">
       </div>
 
       <main>
