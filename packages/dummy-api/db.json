@@ -15,5 +15,22 @@
       "description": "Lorem Ipsum example deck."
     }
   ],
-  "cards": []
+  "cards": [{
+    "deckid": "aXgy78oZ",
+    "id": "aksdf34HB",
+    "front": "Cheese",
+    "back": "Dairy Product"
+  },
+  {
+    "deckid": "aXgy78oZ",
+    "id": "gdd454",
+    "front": "Milk",
+    "back": "Animal"
+  },
+  {
+    "deckid": "0iH7gKG7q",
+    "id": "ji52o4",
+    "front": "Milk",
+    "back": "Animal"
+  }]
 }
