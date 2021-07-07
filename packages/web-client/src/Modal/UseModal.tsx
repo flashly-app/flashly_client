@@ -5,6 +5,8 @@ type UseModalProps = {
   setModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
   setNewDeckInput: Function;
   newDeckInput: FormDataModel;
+  deckList: FormDataModel[];
+  setDeckList: Function;
 };
 export interface FormDataModel {
   id: string;
@@ -16,6 +18,8 @@ const UseModal: React.FC<UseModalProps> = ({
   setModalOpen,
   setNewDeckInput,
   newDeckInput,
+  deckList,
+  setDeckList,
 }) => {
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -32,9 +36,14 @@ const UseModal: React.FC<UseModalProps> = ({
           "Content-type": "application/json; charset=UTF-8",
         },
       });
+      const data = await response.json();
+      const updatedData = [...deckList, data];
+      setDeckList(updatedData);
       setNewDeckInput({ name: "", description: "", id: "" });
       setModalOpen(false);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <div className={styles.modal__background}>

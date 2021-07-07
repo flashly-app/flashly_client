@@ -23,7 +23,7 @@ function App() {
 
   useEffect(() => {
     fetchDeckListData();
-  }, [deckList]);
+  }, []);
 
   return (
     <div className="App">
@@ -50,6 +50,8 @@ function App() {
                   setModalOpen={setModalOpen}
                   setNewDeckInput={setNewDeckInput}
                   newDeckInput={newDeckInput}
+                  deckList={deckList}
+                  setDeckList={setDeckList}
                 />
               </Modal>
             </div>
