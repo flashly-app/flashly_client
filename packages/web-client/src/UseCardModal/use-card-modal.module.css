@@ -1,0 +1,60 @@
+.useCardModal__background{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(204,204,204,.6);
+    backdrop-filter: blur(5px);
+}
+
+.useCardModal__container{
+    display:flex;
+    flex-direction: row;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 130px;
+    width: 450px;
+    margin: 20px 0;
+    background-color: #a4a4a4;
+    color: white;
+    padding: 2em;
+    justify-content: space-between;
+}
+
+.useCardModal__input{
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    min-width: 200px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.useCardModal__labels{
+    display: flex;
+}
+
+.useCardModal__buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card__vr{
+    border-left: 1px white solid;
+    margin: 0 10px;
+    height: 120px;
+}
+
+.useCardModal__center{
+    width: 600px;
+    max-width: 100%;
+    height: 400px;
+    max-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

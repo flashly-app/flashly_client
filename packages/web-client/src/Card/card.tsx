@@ -1,7 +1,7 @@
 import React from 'react';
 import { CardListModel } from '../DeckShowPage/deck-show-page';
 import styles from './card.module.css';
-import { FaGithub, FaRegEdit, FaTrashAlt } from 'react-icons/fa';
+import { FaRegEdit, FaTrashAlt } from 'react-icons/fa';
 
 export interface CardProps {
     data: CardListModel;
