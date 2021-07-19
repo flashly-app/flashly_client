@@ -3,7 +3,7 @@
     flex-direction: column;
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    height: 130px;
+    height: auto;
     width: 300px;
     margin: 20px;
     background-color: #a4a4a4;
@@ -14,19 +14,20 @@
 .deckShowPage__title{
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;
     font: bold 1.3em Arial, sans-serif;
-    margin: .4em .4em 0em .4em;
+    margin: 0 -15px 0 0;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .deckShowPage__description{
-    height: 90px;
     display: -webkit-box;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     overflow: hidden;
     white-space: pre-line;
-    margin: 0em .6em 1em .6em;
+    margin: -20px 5px 20px 0;
 }
 
 .deckShowPage__pageContainer{
@@ -36,8 +37,7 @@
 
 .deckShowPage__cardContainer{
     margin: 20px;
-    display: flex;
-    flex-direction: column;
+    height: 140px;
 }
 
 .deckShowPage__button{
@@ -55,4 +55,45 @@
     border: 1px solid rgba(119, 136, 153, 50%);
     cursor: pointer;
     transition: background ease 0.1s;
+}
+
+.deckShowPage__buttons{
+    padding: 0 0 20px;
+    font-size: 15px;
+}
+
+.deckShowPage__titleContainer{
+    display: flex;
+}
+
+.deckShowPage__inputs{
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    min-width: 200px;
+    padding: 5px;
+    margin: 3px 0 20px;
+    color: white
+}
+
+.deckShowPage__form{
+    display: flex;
+    flex-direction: column;
+}
+
+.deckShowPage__editButtons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.deckShowPage__editButton:hover{
+    cursor: pointer;
+}
+
+.deckShowpage__editIcon:hover{
+    cursor: pointer; 
+  }
+
+.deckShowPage__editIcon{
+    margin: 5px 0 0 2px;
 }

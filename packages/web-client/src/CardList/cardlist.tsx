@@ -4,15 +4,16 @@ import { Card } from '../Card/card';
 
 export interface CardListProps {
     data: CardListModel[]; //data is props, look at cardlistmodel's keys
+    setCardList: () => void;
 }
 
 export const CardList: React.FC<CardListProps> = ({
-    data
+    data, setCardList
 }) => {
     return(
         <div>
             {data.map((item)=> (
-                <Card data={item} key={item.id}/>
+                <Card data={item} key={item.id} setCardList={setCardList}/>
             ))}
         </div>
     )

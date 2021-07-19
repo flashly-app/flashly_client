@@ -7,6 +7,8 @@ declare const styles: {
     readonly card__vr: string;
     readonly card__delete: string;
     readonly card__edit: string;
+    readonly card__editButtons: string;
+    readonly card__formContainer: string;
   };
   
   export = styles;

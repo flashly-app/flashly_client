@@ -10,6 +10,7 @@ function App() {
   const [deck, setDeck] = useState({id:"", description:"", name:""});
   const [openDeck,setOpenDeck] = useState(false)
   const [modalOpen, setModalOpen] = useState(false) 
+  
 
 
   return (
@@ -47,7 +48,7 @@ function App() {
 
       <main>
         <div className="dashboard">
-          {openDeck ? ( <DeckShowPage deck={deck}/>) : (<Homepage setDeck={setDeck} setOpenDeck={setOpenDeck}/>)}
+          {openDeck ? ( <DeckShowPage deck={deck} setDeck={setDeck}/>) : (<Homepage setDeck={setDeck} setOpenDeck={setOpenDeck}/>)}
         </div>
       </main>
     </div>
