@@ -48,7 +48,7 @@ function App() {
 
       <main>
         <div className="dashboard">
-          {openDeck ? ( <DeckShowPage deck={deck} setDeck={setDeck}/>) : (<Homepage setDeck={setDeck} setOpenDeck={setOpenDeck}/>)}
+          {openDeck ? ( <DeckShowPage deck={deck} setDeck={setDeck} setOpenDeck={setOpenDeck}/>) : (<Homepage setDeck={setDeck} setOpenDeck={setOpenDeck}/>)}
         </div>
       </main>
     </div>

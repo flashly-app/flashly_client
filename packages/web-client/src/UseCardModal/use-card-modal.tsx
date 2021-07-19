@@ -17,6 +17,7 @@ const UseCardModal: React.FC<UseCardModalProps> = ({ setCardModalOpen, newCardIn
     const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         const randomId = Math.floor(Math.random() * 10000).toString();
+        console.log("deckid", deckId);
         setAddCardInput({
             ...newCardInput, [name]: value, deckid: deckId, id: randomId
         })

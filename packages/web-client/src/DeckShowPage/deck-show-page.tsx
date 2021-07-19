@@ -8,6 +8,7 @@ import { FaRegEdit, FaTrashAlt } from 'react-icons/fa';
 export interface DeckProps {
     deck: DeckModel;
     setDeck: Function;
+    setOpenDeck: Function;
 }
 
 export interface DeckModel {
@@ -23,7 +24,7 @@ export interface CardListModel {
     deckid: string;
 }
 
-export const DeckShowPage: React.FunctionComponent<DeckProps> = ({ deck, setDeck }) => {
+export const DeckShowPage: React.FunctionComponent<DeckProps> = ({ deck, setDeck, deck: {id}, setOpenDeck }) => {
 
     const [cardlist, setSelectCardList] = useState([]);
     const [cardModalOpen, setCardModalOpen] = useState(false);
@@ -52,6 +53,28 @@ export const DeckShowPage: React.FunctionComponent<DeckProps> = ({ deck, setDeck
         setDeck(data);
     };
 
+    const handleDeleteRoute = async (id: string) => {
+          const response = await fetch(`http://localhost:3005/decks/${id}`, {
+            method: "DELETE",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          });
+          await response.json();
+        cardlist.map( async ({id}) => {
+            console.log("card id", id);
+                await fetch(`http://localhost:3005/cards/${id}`, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            })
+        })
+         setOpenDeck(false);
+        };
+
+
+
     const setCardList = useCallback(async () => {
         const response = await fetch("http://localhost:3005/cards");
         const data = await response.json();
@@ -76,7 +99,7 @@ export const DeckShowPage: React.FunctionComponent<DeckProps> = ({ deck, setDeck
                         setCardModalOpen={setCardModalOpen}
                         newCardInput={newCardInput}
                         setAddCardInput={setAddCardInput}
-                        deckId={deck.id}
+                        deckId={id}
                         cardlist={cardlist}
                         setSelectCardList={setSelectCardList}
                     />
@@ -131,7 +154,11 @@ export const DeckShowPage: React.FunctionComponent<DeckProps> = ({ deck, setDeck
                         <div className={styles.deckShowPage__titleContainer}>
                             <div className={styles.deckShowPage__title}>{deck.name}
                                 <div className={styles.deckShowPage__buttons}>
-                                    <div className={styles.deckShowPage__editButton}>
+                                    <div className={styles.deckShowPage__editButton}
+                                    onClick={() => {
+                                        handleDeleteRoute(deck.id)
+                                    }}
+                                    >
                                         <FaTrashAlt />
                                     </div>
                                     <div 
