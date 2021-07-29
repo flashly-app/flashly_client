@@ -2,18 +2,18 @@
   "decks": [
     {
       "id": "aXgy78oZ",
-      "name": "Deck 1- make this super long and ugly",
+      "name": "Deck 1",
       "description": "This is an example deck. This is an example deck. This is an example deck. This is an example deck. This is an example deck. This is an example deck. This is an example deck. This is an example deck. This is an example deck. This is an example deck. This is an example deck.  "
     },
     {
-      "name": "Deck 2- Home",
-      "description": "This is another example deck.",
-      "id": "Huio79Jyg"
+      "id": "Huio79Jyg",
+      "name": "Deck 2",
+      "description": "This is another example deck."
     },
     {
-      "id": "0iH7gKG7q",
       "name": "Deck 3",
-      "description": "Lorem Ipsum example deck."
+      "description": "Lorem Ipsum example deck.",
+      "id": "0iH7gKG7q"
     }
   ],
   "cards": [
@@ -22,12 +22,6 @@
       "id": "ji52o4",
       "front": "Milk",
       "back": "Animal"
-    },
-    {
-      "id": "2576",
-      "front": "hello",
-      "back": "world",
-      "deckid": "Huio79Jyg"
     }
   ]
 }

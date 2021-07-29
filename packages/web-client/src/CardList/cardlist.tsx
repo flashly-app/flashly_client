@@ -3,7 +3,7 @@ import { CardListModel } from '../DeckShowPage/deck-show-page';
 import { Card } from '../Card/card';
 
 export interface CardListProps {
-    data: CardListModel[]; //data is props, look at cardlistmodel's keys
+    data: CardListModel[]; 
     setCardList: () => void;
 }
 

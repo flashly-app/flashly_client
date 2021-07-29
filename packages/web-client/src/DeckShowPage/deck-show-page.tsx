@@ -4,6 +4,8 @@ import styles from './deck-show-page.module.css';
 import UseCardModal from '../UseCardModal/use-card-modal';
 import CardModal from '../AddCardModal/add-card-modal';
 import { FaRegEdit, FaTrashAlt } from 'react-icons/fa';
+import DeleteDeckConfirmationModal from '../DeleteDeckConfirmationModal/DeleteDeckConfirmationModal';
+
 
 export interface DeckProps {
     deck: DeckModel;
@@ -30,6 +32,13 @@ export const DeckShowPage: React.FunctionComponent<DeckProps> = ({ deck, setDeck
     const [cardModalOpen, setCardModalOpen] = useState(false);
     const [newCardInput, setAddCardInput] = useState({ id: "", front: "", back: "", deckid: "" });
 
+    const [togglePrompt, setTogglePrompt] = useState(false);
+
+    function toggleDeleteDeckConfirmationModal(){
+        setTogglePrompt(!togglePrompt)
+    }
+
+
     const [isEditToggle, setEditToggle] = useState(false);
     const [editToggleChange, setEditToggleChange] = useState({
         name: deck.name,
@@ -53,17 +62,20 @@ export const DeckShowPage: React.FunctionComponent<DeckProps> = ({ deck, setDeck
         setDeck(data);
     };
 
-    const handleDeleteRoute = async (id: string) => {
-          const response = await fetch(`http://localhost:3005/decks/${id}`, {
+
+    //rename to deleteDeck
+    const handleDeleteRoute = async () => {
+        const deckId = id
+          const response = await fetch(`http://localhost:3005/decks/${deckId}`, {
             method: "DELETE",
             headers: {
               "Content-Type": "application/json",
             },
           });
           await response.json();
-        cardlist.map( async ({id}) => {
+        cardlist.map( async ({deckId}) => {
             console.log("card id", id);
-                await fetch(`http://localhost:3005/cards/${id}`, {
+                await fetch(`http://localhost:3005/cards/${deckId}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",
@@ -156,11 +168,20 @@ export const DeckShowPage: React.FunctionComponent<DeckProps> = ({ deck, setDeck
                                 <div className={styles.deckShowPage__buttons}>
                                     <div className={styles.deckShowPage__editButton}
                                     onClick={() => {
-                                        handleDeleteRoute(deck.id)
+                                        toggleDeleteDeckConfirmationModal()
                                     }}
                                     >
                                         <FaTrashAlt />
                                     </div>
+
+                                    <DeleteDeckConfirmationModal 
+                                    togglePrompt={togglePrompt} 
+                                    handleDeleteRoute={handleDeleteRoute}
+                                    setTogglePrompt={setTogglePrompt}
+                                    />
+
+
+
                                     <div 
                                         className={styles.deckShowPage__editIcon}
                                     onClick={() => {
