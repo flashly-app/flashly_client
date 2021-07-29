@@ -26,7 +26,7 @@ const UseModal: React.FC<UseModalProps> = ({
     const randomId = Math.floor(Math.random() * 10000).toString();
     setNewDeckInput({ ...newDeckInput, [name]: value, id: randomId });
   };
-  const handleOnSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const addNewDeck = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       const response = await fetch("http://localhost:3005/decks", {
@@ -49,10 +49,7 @@ const UseModal: React.FC<UseModalProps> = ({
     <div className={styles.modal__background}>
       <div className={styles.modal__contentContainer}>
         <div className={styles.modal__content}>
-          <form
-            className={styles.modal__form}
-            onSubmit={(e) => handleOnSubmit(e)}
-          >
+          <form className={styles.modal__form} onSubmit={(e) => addNewDeck(e)}>
             <label>
               <input
                 className={styles.modal__title}
