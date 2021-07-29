@@ -1,0 +1,92 @@
+.card__title{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 80px;
+    margin: 10px 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid white;
+    border-style: none;
+    background: transparent;
+    font-size: 16px;
+}
+
+.card__title:focus{
+    border-bottom: 1px solid white;
+    width: 300px;
+    font-size: 16px;
+}
+
+.card__description{
+    margin: 10px 0 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: pre-line;
+    width: 190px;
+    border-bottom: 1px solid white;
+    border-style: none;
+    background: transparent;
+    font-size: 16px;
+}
+
+.card__description:focus{
+    border-bottom: 1px solid white;
+    width: 300px;
+    margin: 0;
+    font-size: 16px;
+}
+
+.card__container{display:flex;
+    flex-direction: row;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 130px;
+    width: 300px;
+    margin: 20px 0;
+    background-color: #a4a4a4;
+    color: white;
+    padding: 2em;
+    justify-content: space-between;
+}
+
+.card__sectionA{
+    display: flex
+}
+
+.card__vr{
+    border-left: 1px white solid;
+    margin: 0 10px;
+}
+
+.card__delete{
+    padding: 2px;
+}
+
+.card__edit{
+    padding: 4px;
+}
+
+.card__sectionB{
+    display: flex;
+    flex-direction: column;
+}
+
+.card__edit:hover{
+    cursor: pointer;
+}
+
+.card__delete:hover{
+    cursor: pointer;
+}
+
+.card__editButtons{
+    display: flex;
+    justify-content: flex-end;
+    margin: 40px 5px 0 0;
+}
+
+.card__formContainer{
+    width: 310px
+}

@@ -1,25 +1,17 @@
 
-import React, { useEffect, useState } from 'react';
-import { DeckList } from '../DeckList/deck-list';
+import React, { useState } from 'react';
 import Modal from '../Modal/Modal';
 import UseModal from '../Modal/UseModal';
 import styles from './App.module.css';
+import { Homepage } from '../Homepage/Homepage';
+import { DeckShowPage } from '../DeckShowPage/deck-show-page';
 
 function App() {
-  const [deckList, setDeckList] = useState([]);
-
-  const fetchDeckListData = async () => {
-    const response = await fetch("http://localhost:3005/decks");
-    const data = await response.json();
-
-    setDeckList(data);
-  };
-
+  const [deck, setDeck] = useState({id:"", description:"", name:""});
+  const [openDeck,setOpenDeck] = useState(false)
   const [modalOpen, setModalOpen] = useState(false) 
+  
 
-  useEffect(() => {
-    fetchDeckListData();
-  }, []);
 
   return (
     <div className="App">
@@ -56,8 +48,7 @@ function App() {
 
       <main>
         <div className="dashboard">
-          <DeckList data={deckList} />
-          <button>Add Deck</button>
+          {openDeck ? ( <DeckShowPage deck={deck} setDeck={setDeck} setOpenDeck={setOpenDeck}/>) : (<Homepage setDeck={setDeck} setOpenDeck={setOpenDeck}/>)}
         </div>
       </main>
     </div>

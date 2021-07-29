@@ -2,6 +2,8 @@ import React, { FunctionComponent } from 'react';
 import styles from './deck-tile.module.css';
 export interface DeckTileProps {
 	data: DeckTileDataModel;
+	setDeck: Function;
+	setOpenDeck: Function;
 }
 
 export interface DeckTileDataModel {
@@ -10,19 +12,15 @@ export interface DeckTileDataModel {
 	description: string;
 }
 
-const handleChangeRoute = (id: string) => {
-	let newRoute = `/decks/${id}`;
-	console.log(newRoute);
-};
-
 export const DeckTile: FunctionComponent<DeckTileProps> = ({
-	data: { id, name, description },
+	data: { id, name, description }, data, setDeck, setOpenDeck
 }) => {
 	return (
 		<pre
 			className={styles['deck-tile']}
 			onClick={() => {
-				handleChangeRoute(id);
+				setDeck(data);
+				setOpenDeck(true)
 			}}>
 			<p className={styles['deck-tile-title']}>{name}</p>
 			<p className={styles['deck-tile-description']}>{description}</p>

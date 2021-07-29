@@ -1,7 +1,8 @@
 {
-  "decks": [{
+  "decks": [
+    {
       "id": "aXgy78oZ",
-      "name": "Deck 1- make this super long and ugly",
+      "name": "Deck 1",
       "description": "This is an example deck. This is an example deck. This is an example deck. This is an example deck. This is an example deck. This is an example deck. This is an example deck. This is an example deck. This is an example deck. This is an example deck. This is an example deck.  "
     },
     {
@@ -10,10 +11,17 @@
       "description": "This is another example deck."
     },
     {
-      "id": "0iH7gKG7q",
       "name": "Deck 3",
-      "description": "Lorem Ipsum example deck."
+      "description": "Lorem Ipsum example deck.",
+      "id": "0iH7gKG7q"
     }
   ],
-  "cards": []
+  "cards": [
+    {
+      "deckid": "0iH7gKG7q",
+      "id": "ji52o4",
+      "front": "Milk",
+      "back": "Animal"
+    }
+  ]
 }
